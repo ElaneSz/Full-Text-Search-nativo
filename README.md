@@ -47,6 +47,7 @@ CREATE TABLE ordens_servico (
     ) STORED
 );
 
+
 -- 2. Inserção de Dados de Exemplo para Testes
 INSERT INTO ordens_servico (problema_cliente, diagnostico, mecanico_responsavel) VALUES
 ('Carro com barulho no motor', 'A oficina realizou a manutenção preventiva. Correia dentada trocada.', 'João Silva'),
