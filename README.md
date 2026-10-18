@@ -13,7 +13,6 @@ Este repositório contém todos os exemplos práticos, consultas SQL e explicaç
 5. [Demonstração 2: Busca Semântica e Normalização com FTS](#4-demonstração-2-busca-semântica-e-normalização-com-fts)
 6. [Demonstração 3: Análise de Desempenho com `EXPLAIN ANALYZE` e Índice GIN](#5-demonstração-3-análise-de-desempenho-com-explain-analyze-e-índice-gin)
 7. [Demonstração 4: Ranking de Relevância (`ts_rank`) e Destaque (`ts_headline`)](#6-demonstração-4-ranking-de-relevância-ts_rank-e-destaque-ts_headline)
-8. [Como Executar os Testes](#-como-executar-os-testes)
 
 ---
 
