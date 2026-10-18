@@ -4,7 +4,7 @@ Este repositório contém todos os exemplos práticos, consultas SQL e explicaç
 
 ---
 
-## 📌 Sumário
+## Sumário
 
 1. [Visão Geral e Pré-requisitos](#-visão-geral-e-pré-requisitos)
 2. [Criação do Esquema e Inserção de Dados](#1-criação-do-esquema-e-inserção-de-dados)
@@ -17,7 +17,7 @@ Este repositório contém todos os exemplos práticos, consultas SQL e explicaç
 
 ---
 
-## 🚀 Visão Geral e Pré-requisitos
+## Visão Geral e Pré-requisitos
 
 O mecanismo de **Full-Text Search (FTS)** nativo do PostgreSQL permite realizar buscas textuais avançadas de alto desempenho diretamente no banco de dados relacional, sem a necessidade de ferramentas de busca externas (como Elasticsearch ou Solr) para a maioria dos casos de uso.
 
@@ -110,7 +110,7 @@ FROM ordens_servico
 WHERE diagnostico LIKE '%manutencao%'; 
 ```
 
-### ❌ Limitações do `LIKE`:
+### Limitações do `LIKE`:
 1. **Falha de Acentuação e Caracteres:** A consulta por `'manutencao'` não encontra `'manutenção'`.
 2. **Incapacidade de Tratar Plural/Flexão:** Não encontra variações como `'manutenções'`.
 3. **Desempenho Ruim:** O uso do coringa no início (`%termo%`) força uma varredura sequencial completa na tabela (*Seq Scan*), inviabilizando índices B-Tree tradicionais.
@@ -128,7 +128,7 @@ FROM ordens_servico
 WHERE search_vector @@ to_tsquery('portuguese', 'manutencao | consertar');
 ```
 
-### ✅ Vantagens do FTS:
+### Vantagens do FTS:
 * Trata acentuação e caixa (case-insensitive) automaticamente.
 * Captura plurais e formas conjugadas de verbos.
 * Utiliza a coluna indexada `search_vector`.
